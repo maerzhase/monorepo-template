@@ -31,12 +31,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./styles.css": "./styles.css"
+    "./styles.css": "./src/styles/styles.css"
   },
   "files": [
     "dist",
-    "src/styles/styles.css",
-    "styles.css"
+    "src/styles/styles.css"
   ],
   "license": "MIT",
   "main": "./dist/index.js",

@@ -5,7 +5,7 @@
     "@biomejs/biome": "2.2.0",
     "@changesets/cli": "2.30.0",
     "syncpack": "14.3.0",
-    "turbo": "2.8.18"
+    "turbo": "2.9.5"
   },
   "engines": {
     "node": ">=20"
