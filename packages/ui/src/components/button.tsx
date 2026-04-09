@@ -6,13 +6,13 @@ import type { ComponentPropsWithoutRef, JSX, ReactNode } from "react";
 import { cn } from "../lib/cn";
 
 const buttonVariants = cva(
-  "inline-flex cursor-pointer items-center justify-center rounded-md border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/70 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60",
+  "inline-flex cursor-pointer items-center justify-center rounded-md border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-60",
   {
     variants: {
       variant: {
         primary:
-          "border-sky-600 bg-sky-600 text-white hover:border-sky-500 hover:bg-sky-500",
-        secondary: "border-slate-300 bg-white text-slate-900 hover:bg-slate-50",
+          "border-foreground bg-foreground text-background hover:opacity-90",
+        secondary: "border-input bg-background text-foreground hover:bg-muted",
       },
       size: {
         default: "h-10",

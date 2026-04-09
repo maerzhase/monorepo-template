@@ -1,7 +1,0 @@
-@source "../**/*.{ts,tsx,js,jsx}";
-
-@theme {
-  --color-accent-50: #f0f9ff;
-  --color-accent-500: #0ea5e9;
-  --color-accent-600: #0284c7;
-}

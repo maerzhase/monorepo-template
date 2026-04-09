@@ -11,7 +11,6 @@ const config: UserConfig = {
   clean: !isWatch,
   outDir: "dist",
   platform: "browser",
-  copy: [{ from: "src/styles/styles.css", to: "styles.css" }],
   external: [
     "react",
     "react-dom",
