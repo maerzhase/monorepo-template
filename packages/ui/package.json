@@ -15,7 +15,9 @@
     "@storybook/addon-themes": "10.1.2",
     "@storybook/react": "10.1.2",
     "@storybook/react-vite": "10.1.2",
+    "@tailwindcss/cli": "4.2.1",
     "@tailwindcss/postcss": "4.2.1",
+    "tailwindcss": "4.2.1",
     "@types/node": "22.14.1",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.3",
@@ -31,11 +33,12 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./styles.css": "./src/styles/styles.css"
+    "./styles.css": "./dist/styles.css",
+    "./theme.css": "./src/styles/theme.css"
   },
   "files": [
     "dist",
-    "src/styles/styles.css"
+    "src/styles"
   ],
   "license": "MIT",
   "main": "./dist/index.js",
@@ -48,7 +51,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown && tailwindcss -i src/styles/styles.css -o dist/styles.css --minify",
     "build-storybook": "storybook build",
     "dev": "tsdown --watch",
     "format": "biome format .",

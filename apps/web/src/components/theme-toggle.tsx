@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@acme/ui";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -14,16 +15,17 @@ export function ThemeToggle() {
   const isDark = mounted && resolvedTheme === "dark";
 
   return (
-    <button
+    <Button
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className="bg-card text-card-foreground border-border hover:bg-muted inline-flex h-11 items-center gap-2 rounded-full border px-4 text-sm font-medium shadow-sm shadow-black/5 backdrop-blur transition-colors dark:shadow-black/30"
+      className="gap-2"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       type="button"
+      variant="secondary"
     >
       <span className="text-base leading-none" aria-hidden="true">
         {isDark ? "☀" : "☾"}
       </span>
       <span>{isDark ? "Light mode" : "Dark mode"}</span>
-    </button>
+    </Button>
   );
 }
