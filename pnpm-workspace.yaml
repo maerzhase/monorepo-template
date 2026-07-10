@@ -4,7 +4,7 @@ packages:
 
 # Supply-chain safeguards. New releases are quarantined for 24 hours, trust
 # evidence may not regress, transitive dependencies must come from trusted
-# sources, and dependency lifecycle scripts are denied until explicitly reviewed.
+# sources, and dependency lifecycle scripts require an explicit review decision.
 minimumReleaseAge: 1440
 trustPolicy: no-downgrade
 trustPolicyExclude:
@@ -13,7 +13,10 @@ trustPolicyExclude:
   - "semver@6.3.1"
 blockExoticSubdeps: true
 strictDepBuilds: true
-allowBuilds: {}
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+  sharp: true
 verifyDepsBeforeRun: error
 
 # Force patched transitive releases where current upstream manifests still
